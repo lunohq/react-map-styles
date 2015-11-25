@@ -7,8 +7,8 @@ module.exports = (file) => {
   }
 
   let isProp;
-  while (isProp = /(is=(?:"|')(.+?)(?:"|'))/.exec(file)) {
-    // The is block that should be replaced. Looks like: `is="message"`
+  while (isProp = /(inlineStyles=(?:"|')(.+?)(?:"|'))/.exec(file)) {
+    // The is block that should be replaced. Looks like: `inlineStyles="message"`
     let prop = isProp[1];
 
     // The name of the value that we want to be returning from the style function.
